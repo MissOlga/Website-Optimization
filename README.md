@@ -31,4 +31,4 @@ Useful tips helped me get started:
   $> cd /path/to/your-project-folder
   $> ngrok http 8080
   ```
-### At main.js used getElementsByClassName which is a faster API compared to querySelectorAll
+At main.js used getElementsByClassName which is a faster API compared to querySelectorAll
