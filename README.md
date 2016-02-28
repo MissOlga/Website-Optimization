@@ -12,23 +12,20 @@ The task runner Gulp has been used to optimize the site.
 
 Type the following commands into your command line in the root directory (where gulpfile.js is located). All working files are located in the 'src' directory, and running gulp tasks will output to the 'dist' directory.
 
+Useful Udacity reviewers' tips helped me update:
+
+### updatePositions function
+
+* Replaced querySelectorAll with getElementsByClassName which is considerably faster.
+* Removed from the for loop the calculation to find scrollTop divided by 1250, and an array of values for use in the phase calculation.
+* Stored the variable items.length outisde of the loop (attribute to http://www.html5rocks.com/en/tutorials/speed/html5/)
+* Replaced the CSS style 'left' which triggers layout, paint and composite, with transform, which only triggers composite. Found on csstriggers.com. The syntax for this can be attributed to Udacity user 'mcs' (https://discussions.udacity.com/t/project-4-how-do-i-optimize-the-background-pizzas-for-loop/36302).
+
 ### resizePizzas function
 
-Useful tips helped me get started:
+* Replaced querySelectorAll with getElementsByClassName which is considerably faster.
 
-1. Check out the repository
-1. To inspect the site on your phone, you can run a local server
 
-  ```bash
-  $> cd /path/to/your-project-folder
-  $> python -m SimpleHTTPServer 8080
-  ```
 
-1. Open a browser and visit localhost:8080
-1. Download and install [ngrok](https://ngrok.com/) to make your local server accessible remotely.
 
-  ``` bash
-  $> cd /path/to/your-project-folder
-  $> ngrok http 8080
-  ```
-At main.js used getElementsByClassName which is a faster API compared to querySelectorAll
+
