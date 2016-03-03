@@ -482,7 +482,6 @@ var resizePizzas = function(size) {
         for (var i = 0; i < container.length; i++) {
             container[i].style.width = newwidth;
         }
-        var newwidth = (document.getElementsByClassName("randomPizzaContainer")[i].offsetWidth + dx) + 'px';
     }
 
     changePizzaSizes(size);
@@ -554,9 +553,10 @@ window.addEventListener('scroll', updatePositions);
 // Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function() {
     var cols = 8;
-    var s = 240;
-    for (var i = 0; i < 96; i++) {
-        var elem = document.createElement('img');
+    var s = 256;
+    var elem;
+    for (var i = 0; i < 48; i++) {
+        elem = document.createElement('img');
         elem.className = 'mover';
         elem.src = "images/pizza.png";
         elem.style.height = "100px";
