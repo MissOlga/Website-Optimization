@@ -16,16 +16,15 @@ Useful Udacity reviewers' tips helped me update:
 
 ### updatePositions function
 
-* Replaced querySelectorAll with getElementsByClassName which is considerably faster.
+* Replaced querySelectorAll with getElementById which is considerably faster.
 * Removed from the for loop the calculation to find scrollTop divided by 1250, and an array of values for use in the phase calculation.
-* Stored the variable items.length outisde of the loop (attribute to http://www.html5rocks.com/en/tutorials/speed/html5/)
 * Replaced the CSS style 'left' which triggers layout, paint and composite, with transform, which only triggers composite. Found on csstriggers.com. The syntax for this can be attributed to Udacity user 'mcs' (https://discussions.udacity.com/t/project-4-how-do-i-optimize-the-background-pizzas-for-loop/36302).
 
 ### resizePizzas function
 
-* Replaced querySelectorAll with getElementsByClassName which is considerably faster.
+* Declared the pizzasDiv variable (var pizzasDiv = document.getElementById('randomPizzas');) outside the loop, so the function only makes one DOM call.
 
-
+* Declared the elem variable (var elem;) outside the loop to prevent it from being created every time the loop is executed.
 
 
 
